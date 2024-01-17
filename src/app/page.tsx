@@ -1,11 +1,4 @@
-import {
-  SignInButton,
-  SignOutButton,
-  UserButton,
-  auth,
-  currentUser,
-} from "@clerk/nextjs";
-import Link from "next/link";
+import { SignInButton, currentUser } from "@clerk/nextjs";
 import { CreatePostWizard } from "~/components/CreatePostWizard";
 import { Feed } from "~/components/Feed";
 import { PageLayout } from "~/components/PageLayout";
@@ -16,7 +9,7 @@ export default async function Home() {
   const user = await currentUser();
 
   // Start fetching asap
-  api.posts.getAll.query();
+  await api.posts.getAll.query();
 
   // Return empty div if user isn't loaded
   if (!user) return <div />;
