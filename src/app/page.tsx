@@ -13,7 +13,6 @@ export default async function Home() {
 
   // Return empty div if user isn't loaded
   if (!user) return <div />;
-  console.log(user.id);
 
   return (
     <PageLayout>

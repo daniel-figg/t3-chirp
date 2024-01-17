@@ -13,7 +13,6 @@ interface PageProps {
 
 const Page = ({ params }: PageProps) => {
   const { id } = params;
-  console.log(id);
   const { data } = api.posts.getById.useQuery({
     id,
   });
