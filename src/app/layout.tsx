@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`font-sans ${inter.variable}`}>
+        <body className={`font-sans ${inter.variable} overscroll-none`}>
           <Toaster position="bottom-center" />
           <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
         </body>
