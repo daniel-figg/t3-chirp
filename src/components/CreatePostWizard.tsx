@@ -33,6 +33,7 @@ export const CreatePostWizard = () => {
   return (
     <div className="flex w-full gap-3">
       <UserButton
+        afterSignOutUrl="/"
         appearance={{
           elements: {
             userButtonAvatarBox: {
